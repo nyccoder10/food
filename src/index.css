@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  display: flex;
+}
+
+/* Faster animation on smaller screens */
+@media (max-width: 1024px) {
+  .animate-scroll {
+    animation-duration: 15s;
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation-duration: 6s;
+  }
+}
+
+@media (max-width: 640px) {
+  .animate-scroll {
+    animation-duration: 4s;
+  }
+}
+
